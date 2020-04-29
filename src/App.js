@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import withGrayScale from "./components/withGrayScale";
+import awesomeImage from "./components/awesomeImage";
+
+
+const GrayScaleImage = withGrayScale(awesomeImage, { value: 0.9 });
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GrayScaleImage URL="https://thuthuatnhanh.com/wp-content/uploads/2020/03/hinh-ve-de-thuong-cute.jpg"></GrayScaleImage>
     </div>
   );
 }
-
-export default App;
